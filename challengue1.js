@@ -1,7 +1,5 @@
 // El papel de regalo es el símbolo * y para envolver un regalo se coloca el símbolo * de forma que rodee totalmente al string por todos los lados. Por ejemplo:
 
-const { LOADIPHLPAPI } = require("dns");
-
 // console.log(wrapped)
 /* [
     "*****\\n*cat*\\n*****",
@@ -15,9 +13,9 @@ const { LOADIPHLPAPI } = require("dns");
 // ¡Ojo! Asegúrate que pones el número correcto de * para envolver completamente el string. Pero no demasiados. Sólo los necesarios para cubrir el string.
 
 // Ah, y no modifiques (mutes) el array original.
-const gifts = ['cat', 'game', 'socks']
 // 3 letras > 5 *
 
+const gifts2 = ['cat', 'game', 'socks']
 function wrapping(gifts) {
 
     let asterisco = "*"
@@ -27,7 +25,7 @@ function wrapping(gifts) {
     gifts.forEach((element, index) => {
         largeItem = element.length + 2
 
-        items.push(`${asterisco.repeat(largeItem)}\n ${element} \n${asterisco.repeat(largeItem)}`)
+        items.push(`${asterisco.repeat(largeItem)}\n${asterisco}${element}${asterisco}\n${asterisco.repeat(largeItem)}`)
 
     });
     // console.log(items);
@@ -36,9 +34,14 @@ function wrapping(gifts) {
 
 }
 
-const wrapped = wrapping(gifts)
+const wrapped = wrapping(gifts2)
 
 console.log(wrapped);
+
+
+
+
+
 
 
 
